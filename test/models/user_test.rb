@@ -64,6 +64,6 @@ class UserTest < ActiveSupport::TestCase
   test "authenticated? should return false for a user with nil digest" do
     # Pass any string in authenticated? because remember digest doesn't exist as 
     # @user doesn't exist in database
-    assert_not @user.authenticated?('') 
+    assert_not @user.authenticated?(:remember, '') 
   end
 end
